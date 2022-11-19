@@ -3,38 +3,49 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
+
+#testo-pc {
+  opacity: 0;
+}
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 a {
   text-decoration: none;
   color: inherit;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 button {
   background-color: transparent;
   color: inherit;
   border-width: 0;
   padding: 0;
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 figure {
-  margin: 0; }
+  margin: 0;
+}
 
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 ul,
 ol,
 dd {
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+}
 
 h1,
 h2,
@@ -44,29 +55,37 @@ h5,
 h6 {
   margin: 0;
   font-size: inherit;
-  font-weight: inherit; }
+  font-weight: inherit;
+}
 
 p {
-  margin: 0; }
+  margin: 0;
+}
 
 cite {
-  font-style: normal; }
+  font-style: normal;
+}
 
 fieldset {
   border-width: 0;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+}
 
 g#logo {
-  opacity: 0; }
+  opacity: 0;
+}
 
 g#pc-logo1 {
-  opacity: 0; }
+  opacity: 0;
+}
 
 g#pc-scatola {
-  opacity: 0; }
+  opacity: 0;
+}
 
 g#testo-ricevuto {
-  opacity: 0; }
+  opacity: 0;
+}
 
 /*# sourceMappingURL=style.css.map */
