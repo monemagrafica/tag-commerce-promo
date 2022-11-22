@@ -51,10 +51,11 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+  margin: 0 0 1rem 0;
+  line-height: 1;
 }
 p {
-  margin: 0;
+  margin: 0 0 1rem 0;
 }
 cite {
   font-style: normal;
@@ -196,7 +197,14 @@ fieldset {
     }
   }
 }
-
+section.form {
+  display: flex;
+  justify-content: center;
+  margin: 10rem 0;
+  height: 100vh;
+  max-width: 900px;
+  margin: 5% auto;
+}
 g#logo {
   opacity: 0;
 }

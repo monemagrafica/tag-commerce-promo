@@ -75,13 +75,20 @@ const block3 = gsap.timeline({
   },
 });
 block3
-  .from("#scheda-add", {
-    y: 50,
-    opacity: 0,
-  })
+
+  .from(
+    "#scheda-add",
+    {
+      y: 50,
+      opacity: 0,
+      duration: 0.2,
+    },
+    "<="
+  )
   .from("#scheda-testo", {
     y: 50,
     opacity: 0,
+    duration: 0.2,
   })
   .to(
     "#pc-cursore",
@@ -105,14 +112,54 @@ block3
     ease: "back.out(1.7)",
     duration: 1,
   })
+
   .to("#pc-scheda-tazza", {
     x: 325,
     y: -40,
-    rotate: 320,
+    rotate: 180,
     transformOrigin: "50% 50%",
     delay: 0.5,
-  });
+    duration: 1,
+  })
+  .to("#wrapperscheda", { opacity: 0 })
+  .from(
+    "#thumbup",
+    {
+      opacity: 0,
+      y: 50,
+    },
+    "<="
+  )
+  .from(
+    "#monete",
+    {
+      opacity: 0,
+      y: 50,
+    },
+    "<="
+  )
+  .from(
+    "#logo-3",
+    {
+      opacity: 0,
+      rotate: 90,
+      transformOrigin: "50% 50%",
+    },
+    "<="
+  );
+const form = gsap.timeline({
+  scrollTrigger: {
+    markers: true,
+    trigger: ".form",
+    start: "top bottom",
+    duration: 1,
+  },
+});
 
+form.from(".form header", {
+  opacity: 0,
+  y: 100,
+});
 gsap.to("#idea-pianta", {
   y: 5,
   duration: 1,
