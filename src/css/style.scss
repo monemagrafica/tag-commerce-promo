@@ -1,5 +1,9 @@
 /****** Elad Shechter's RESET *******/
 /*** box sizing border-box for all elements ***/
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,300;0,800;1,600&display=swap");
+
+$testoScroll: "Abril Fatface";
+$title: "poppins";
 *,
 *::before,
 *::after {
@@ -11,7 +15,9 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Poppins";
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -46,8 +52,6 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-size: inherit;
-  font-weight: inherit;
 }
 p {
   margin: 0;
@@ -60,6 +64,138 @@ fieldset {
   padding: 0;
   margin: 0;
 }
+.block {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+
+  .background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  .idea {
+    position: absolute;
+    z-index: 100;
+    width: 600px;
+    top: 42%;
+    left: 33%;
+  }
+  .pc {
+    position: absolute;
+    max-width: 1200px;
+    width: 100%;
+    right: 0;
+    top: 15%;
+  }
+  .acquisto {
+    position: absolute;
+    max-width: 1250px;
+    width: 100%;
+    left: 10%;
+    top: 28%;
+  }
+  &.uno .wrapper-header {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    font-family: $testoScroll;
+    line-height: 1;
+    color: white;
+    justify-content: center;
+    top: 30%;
+
+    h1 {
+      font-size: 4rem;
+      text-align: right;
+      letter-spacing: 2px;
+      text-shadow: 3px 4px 1px #d8b34e66;
+
+      span {
+        display: block;
+        font-size: 6rem;
+      }
+    }
+    .nuvola-prodotti {
+      max-width: 400px;
+      height: 300px;
+    }
+  }
+  &.tre .wrapper-header {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    font-family: $testoScroll;
+    line-height: 1;
+    color: white;
+    justify-content: flex-end;
+    top: 30%;
+    h1 {
+      font-size: 4rem;
+      text-align: right;
+      font-family: $title;
+
+      span {
+        display: block;
+        font-size: 6rem;
+      }
+    }
+    p {
+      font-family: $title;
+      margin-top: 1rem;
+      text-align: right;
+      line-height: 25px;
+    }
+  }
+  &.due .wrapper-header {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    font-family: $testoScroll;
+    line-height: 1;
+    color: white;
+    justify-content: flex-start;
+    top: 30%;
+
+    h1 {
+      font-size: 4rem;
+      text-align: right;
+      font-family: $title;
+
+      span {
+        display: block;
+        font-size: 6rem;
+      }
+    }
+    p {
+      font-family: $title;
+      margin-top: 1rem;
+      text-align: right;
+      line-height: 25px;
+    }
+  }
+  header {
+    margin: 1rem;
+    max-width: 600px;
+    position: relative;
+  }
+  &.due {
+    background-color: lightcoral;
+    header {
+      left: 16%;
+    }
+  }
+  &.tre {
+    background-color: rgb(122, 145, 213);
+    header {
+      right: 5%;
+    }
+  }
+}
 
 g#logo {
   opacity: 0;
@@ -68,9 +204,6 @@ g#pc-logo1 {
   opacity: 0;
 }
 
-g#pc-scatola {
-  opacity: 0;
-}
-g#testo-ricevuto {
-  opacity: 0;
+h1 {
+  font-size: 2rem;
 }

@@ -1,25 +1,178 @@
 gsap.registerPlugin(ScrollTrigger);
-const mainTimeLine = gsap.timeline({
+const block1 = gsap.timeline({
   scrollTrigger: {
     markers: true,
-    trigger: ".jumbo",
+    trigger: ".block.uno",
     start: "top top",
-    end: "+=" + 6000,
+    end: "bottom top",
     scrub: true,
     pin: true,
-    duration: 30,
   },
 });
 
-mainTimeLine
-  .from("#testo2", { opacity: 0, y: 50 })
+block1
+  .from(".block.uno .wrapper-header", { y: 300 })
+  .fromTo(".jumbo .idea", { opacity: 0, y: 0 }, { opacity: 1, y: 0 })
   .fromTo(
     "#idea",
     { y: 100, opacity: 0 },
     { y: 0, opacity: 1, duration: 1 },
+    "-=1"
+  );
+const block2 = gsap.timeline({
+  scrollTrigger: {
+    markers: true,
+    trigger: ".block.due",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+    duration: 30,
+    pin: true,
+  },
+});
+
+block2
+  .from(".block.due header", { y: 100, opacity: 0 })
+  .to(
+    "#pc-logo",
+    {
+      y: -60,
+      x: 200,
+      scale: 0.7,
+      transformOrigin: "50% 50%",
+      rotate: 360,
+    },
     "<="
   )
-  .from("#testo3", { opacity: 0, y: 50, delay: 1 })
+  .to("#pc-logo", { opacity: 0 })
+  .fromTo(
+    "#grigliaprodotto",
+    { opacity: 0, scale: 0.2, transformOrigin: "50% 50%" },
+    { opacity: 1, scale: 1 },
+    "<="
+  )
+  .fromTo(
+    "#prodotti-pc",
+    { opacity: 0, y: -100 },
+    { opacity: 1, y: 0, ease: "back.out(1.7)", duration: 1, delay: 1 }
+  );
+
+const tlNuvole = gsap.timeline({ repeat: -1, yoyo: true });
+
+tlNuvole
+  .to("#nuvola1", { y: 5, duration: 1 })
+  .to("#nuvola2", { y: -5, duration: 1 }, "<=");
+
+const block3 = gsap.timeline({
+  scrollTrigger: {
+    markers: true,
+    trigger: ".block.tre",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+    duration: 30,
+    pin: true,
+  },
+});
+block3
+  .from("#scheda-add", {
+    y: 50,
+    opacity: 0,
+  })
+  .from("#scheda-testo", {
+    y: 50,
+    opacity: 0,
+  })
+  .to(
+    "#pc-cursore",
+    {
+      y: -40,
+      x: 50,
+      scale: 1,
+    },
+    "<="
+  )
+  .fromTo(
+    "#pc-cursore",
+    {
+      scale: 0.8,
+    },
+    { scale: 1, delay: 1 }
+  )
+  .from("#blocco3", {
+    opacity: 0,
+    y: 100,
+    ease: "back.out(1.7)",
+    duration: 1,
+  })
+  .to("#pc-scheda-tazza", {
+    x: 325,
+    y: -40,
+    rotate: 320,
+    transformOrigin: "50% 50%",
+    delay: 0.5,
+  });
+
+gsap.to("#idea-pianta", {
+  y: 5,
+  duration: 1,
+  repeat: -1,
+  ease: "sine.inOut",
+  yoyo: true,
+});
+gsap.to("#idea-sveglia", {
+  y: 5,
+  duration: 1,
+  repeat: -1,
+  ease: "sine.out",
+  yoyo: true,
+});
+gsap.to("#idea-vaso", {
+  y: 5,
+  duration: 1,
+  repeat: -1,
+  ease: "sine.out",
+  yoyo: true,
+});
+gsap.to("#idea-scarpa", {
+  y: -5,
+  duration: 1,
+  repeat: -1,
+  ease: "sine.out",
+  yoyo: true,
+});
+gsap.to("#idea-scarpa2", {
+  y: 5,
+  duration: 1,
+  repeat: -1,
+  ease: "sine.out",
+  yoyo: true,
+});
+gsap.to("#idea-macchina", {
+  y: -5,
+  duration: 1,
+  repeat: -1,
+  ease: "sine.out",
+  yoyo: true,
+});
+gsap.to("#idea-tazza", {
+  y: 5,
+  duration: 1,
+  repeat: -1,
+  ease: "sine.out",
+  yoyo: true,
+});
+gsap.to("#idea-regalo", {
+  y: 5,
+  duration: 1,
+  repeat: -1,
+  yoyo: true,
+});
+/*  .from("#testo3", { opacity: 0, y: 50, delay: 3 })
+.to("#idea", {
+    opacity: 0,
+    duration: 1,
+  })
   .fromTo(
     "#pc",
     { y: 100, opacity: 0, scale: 0.9 },
@@ -30,13 +183,12 @@ mainTimeLine
   .fromTo(
     "#pc-logo",
     { y: 100, opacity: 0 },
-    { y: 0, opacity: 1, duration: 2 },
-    "<="
+    { y: 0, opacity: 1, duration: 1, delay: 2 }
   )
   .from("#testo4", { opacity: 0, y: 50 })
   .to("#pc", { scale: 1, y: 0 }, "<=")
-  .to("#pc-logo", { y: 100, opacity: 0, delay: 2, duration: 1 })
-  .from("#pianta", { y: 20, opacity: 0 }, "<=")
+  .to("#pc-logo", { y: 100, opacity: 0, delay: 3, duration: 1 })
+  .from("#pianta", { y: 20, opacity: 0 })
   .from("#sveglia", { y: 20, opacity: 0 }, "<=")
   .from("#vaso", { y: -30, opacity: 0 }, "<=")
   .from("#regalo", { y: -30, opacity: 0 }, "<=")
@@ -216,72 +368,9 @@ mainTimeLine
       y: 15,
       ease: "back.out(1.7)",
       duration: 1,
+      delay: 1,
     },
     "<="
   );
 
-const tlNuvole = gsap.timeline({ repeat: -1, yoyo: true });
-
-tlNuvole
-  .to("#nuvola1", { y: 5, duration: 3 })
-  .to("#nuvola2", { y: -5, duration: 3 }, "<=")
-  .to("#nuvola3", { y: -5, duration: 3 }, "<=")
-  .to("#nuvola4", { y: -5, duration: 3 }, "<=")
-  .to("#nuvola5", { y: 5, duration: 3 }, "<=");
-
-gsap.to("#idea-pianta", {
-  y: 5,
-  duration: 5,
-  repeat: -1,
-  ease: "sine.inOut",
-  yoyo: true,
-});
-gsap.to("#idea-sveglia", {
-  y: 5,
-  duration: 5,
-  repeat: -1,
-  ease: "sine.out",
-  yoyo: true,
-});
-gsap.to("#idea-vaso", {
-  y: 5,
-  duration: 5,
-  repeat: -1,
-  ease: "sine.out",
-  yoyo: true,
-});
-gsap.to("#idea-scarpa", {
-  y: -5,
-  duration: 5,
-  repeat: -1,
-  ease: "sine.out",
-  yoyo: true,
-});
-gsap.to("#idea-scarpa2", {
-  y: 5,
-  duration: 5,
-  repeat: -1,
-  ease: "sine.out",
-  yoyo: true,
-});
-gsap.to("#idea-macchina", {
-  y: -5,
-  duration: 5,
-  repeat: -1,
-  ease: "sine.out",
-  yoyo: true,
-});
-gsap.to("#idea-tazza", {
-  y: 5,
-  duration: 5,
-  repeat: -1,
-  ease: "sine.out",
-  yoyo: true,
-});
-gsap.to("#idea-regalo", {
-  y: 5,
-  duration: 5,
-  repeat: -1,
-  ease: "sine.out",
-  yoyo: true,
-});
+ */

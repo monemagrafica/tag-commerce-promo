@@ -1,5 +1,6 @@
 /****** Elad Shechter's RESET *******/
 /*** box sizing border-box for all elements ***/
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,300;0,800;1,600&display=swap");
 *,
 *::before,
 *::after {
@@ -13,6 +14,7 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Poppins";
 }
 
 a {
@@ -54,8 +56,6 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-size: inherit;
-  font-weight: inherit;
 }
 
 p {
@@ -72,6 +72,133 @@ fieldset {
   margin: 0;
 }
 
+.block {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+}
+.block .background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.block .idea {
+  position: absolute;
+  z-index: 100;
+  width: 600px;
+  top: 42%;
+  left: 33%;
+}
+.block .pc {
+  position: absolute;
+  max-width: 1200px;
+  width: 100%;
+  right: 0;
+  top: 15%;
+}
+.block .acquisto {
+  position: absolute;
+  max-width: 1250px;
+  width: 100%;
+  left: 10%;
+  top: 28%;
+}
+.block.uno .wrapper-header {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  font-family: "Abril Fatface";
+  line-height: 1;
+  color: white;
+  justify-content: center;
+  top: 30%;
+}
+.block.uno .wrapper-header h1 {
+  font-size: 4rem;
+  text-align: right;
+  letter-spacing: 2px;
+  text-shadow: 3px 4px 1px rgba(216, 179, 78, 0.4);
+}
+.block.uno .wrapper-header h1 span {
+  display: block;
+  font-size: 6rem;
+}
+.block.uno .wrapper-header .nuvola-prodotti {
+  max-width: 400px;
+  height: 300px;
+}
+.block.tre .wrapper-header {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  font-family: "Abril Fatface";
+  line-height: 1;
+  color: white;
+  justify-content: flex-end;
+  top: 30%;
+}
+.block.tre .wrapper-header h1 {
+  font-size: 4rem;
+  text-align: right;
+  font-family: "poppins";
+}
+.block.tre .wrapper-header h1 span {
+  display: block;
+  font-size: 6rem;
+}
+.block.tre .wrapper-header p {
+  font-family: "poppins";
+  margin-top: 1rem;
+  text-align: right;
+  line-height: 25px;
+}
+.block.due .wrapper-header {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  font-family: "Abril Fatface";
+  line-height: 1;
+  color: white;
+  justify-content: flex-start;
+  top: 30%;
+}
+.block.due .wrapper-header h1 {
+  font-size: 4rem;
+  text-align: right;
+  font-family: "poppins";
+}
+.block.due .wrapper-header h1 span {
+  display: block;
+  font-size: 6rem;
+}
+.block.due .wrapper-header p {
+  font-family: "poppins";
+  margin-top: 1rem;
+  text-align: right;
+  line-height: 25px;
+}
+.block header {
+  margin: 1rem;
+  max-width: 600px;
+  position: relative;
+}
+.block.due {
+  background-color: lightcoral;
+}
+.block.due header {
+  left: 16%;
+}
+.block.tre {
+  background-color: rgb(122, 145, 213);
+}
+.block.tre header {
+  right: 5%;
+}
+
 g#logo {
   opacity: 0;
 }
@@ -80,12 +207,8 @@ g#pc-logo1 {
   opacity: 0;
 }
 
-g#pc-scatola {
-  opacity: 0;
-}
-
-g#testo-ricevuto {
-  opacity: 0;
+h1 {
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
