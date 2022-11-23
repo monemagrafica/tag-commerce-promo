@@ -11,7 +11,7 @@ const block1 = gsap.timeline({
     markers: true,
     trigger: ".block.uno",
     start: "top top",
-    end: "+=" + (blockUno.offsetHeight * 2),
+    end: (blockUno.offsetHeight * 2),
     scrub: true,
     pin: true,
   },
@@ -43,7 +43,7 @@ const block2 = gsap.timeline({
 });
 
 block2
-  .from(".block.due header", { y: 100, opacity: 0 })
+  .from(".block.due .wrapper-header", { y: 300, opacity: 0 })
   .to(
     "#pc-logo",
     {
@@ -87,7 +87,7 @@ const block3 = gsap.timeline({
   },
 });
 block3
-
+  .from(".block.tre .wrapper-header", { y: 300, opacity: 0 })
   .from(
     "#scheda-add",
     {
@@ -127,7 +127,8 @@ block3
 
   .to("#pc-scheda-tazza", {
     x: 325,
-    y: -40,
+    y: -35,
+    scale: .9,
     rotate: 180,
     transformOrigin: "50% 50%",
     delay: 0.5,

@@ -69,6 +69,7 @@ fieldset {
   height: 100vh;
   width: 100vw;
   position: relative;
+  left: 0;
   overflow: hidden;
 
   .background {
@@ -202,7 +203,7 @@ section.form {
   justify-content: center;
   margin: 10rem 0;
   height: 100vh;
-  max-width: 900px;
+  max-width: 850px;
   margin: 5% auto;
 }
 g#logo {
@@ -214,4 +215,5 @@ g#pc-logo1 {
 
 h1 {
   font-size: 2rem;
+  line-height: 1.1;
 }
