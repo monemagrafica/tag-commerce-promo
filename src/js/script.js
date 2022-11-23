@@ -1,10 +1,17 @@
+
+const blockUno = document.querySelector('.block.uno')
+const blockDue = document.querySelector('.block.due')
+const blockTre = document.querySelector('.block.tre')
+
+console.dir(blockTre);
+
 gsap.registerPlugin(ScrollTrigger);
 const block1 = gsap.timeline({
   scrollTrigger: {
     markers: true,
     trigger: ".block.uno",
     start: "top top",
-    end: "bottom top",
+    end: "+=" + (blockUno.offsetHeight * 2),
     scrub: true,
     pin: true,
   },
@@ -19,12 +26,16 @@ block1
     { y: 0, opacity: 1, duration: 1 },
     "-=1"
   );
+
+
+
+
 const block2 = gsap.timeline({
   scrollTrigger: {
     markers: true,
     trigger: ".block.due",
     start: "top top",
-    end: "bottom top",
+    end: "+=" + (blockDue.offsetHeight * 2),
     scrub: true,
     duration: 30,
     pin: true,
@@ -41,6 +52,7 @@ block2
       scale: 0.7,
       transformOrigin: "50% 50%",
       rotate: 360,
+      duration: 1
     },
     "<="
   )
@@ -68,7 +80,7 @@ const block3 = gsap.timeline({
     markers: true,
     trigger: ".block.tre",
     start: "top top",
-    end: "bottom top",
+    end: "+=" + (blockTre.offsetHeight * 2),
     scrub: true,
     duration: 30,
     pin: true,

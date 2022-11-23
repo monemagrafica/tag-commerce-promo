@@ -4,50 +4,42 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 #testo-pc {
-  opacity: 0;
-}
+  opacity: 0; }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins";
-}
+  font-family: "Poppins"; }
 
 a {
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 button {
   background-color: transparent;
   color: inherit;
   border-width: 0;
   padding: 0;
-  cursor: pointer;
-}
+  cursor: pointer; }
 
 figure {
-  margin: 0;
-}
+  margin: 0; }
 
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
-  margin: 0;
-}
+  margin: 0; }
 
 ul,
 ol,
 dd {
   margin: 0;
   padding: 0;
-  list-style: none;
-}
+  list-style: none; }
 
 h1,
 h2,
@@ -56,149 +48,123 @@ h4,
 h5,
 h6 {
   margin: 0 0 1rem 0;
-  line-height: 1;
-}
+  line-height: 1; }
 
 p {
-  margin: 0 0 1rem 0;
-}
+  margin: 0 0 1rem 0; }
 
 cite {
-  font-style: normal;
-}
+  font-style: normal; }
 
 fieldset {
   border-width: 0;
   padding: 0;
-  margin: 0;
-}
+  margin: 0; }
 
 .block {
   height: 100vh;
   width: 100vw;
   position: relative;
-  overflow: hidden;
-}
-.block .background {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-.block .idea {
-  position: absolute;
-  z-index: 100;
-  width: 600px;
-  top: 42%;
-  left: 33%;
-}
-.block .pc {
-  position: absolute;
-  max-width: 1200px;
-  width: 100%;
-  right: 0;
-  top: 15%;
-}
-.block .acquisto {
-  position: absolute;
-  max-width: 1250px;
-  width: 100%;
-  left: 10%;
-  top: 28%;
-}
-.block.uno .wrapper-header {
-  position: relative;
-  z-index: 100;
-  display: flex;
-  font-family: "Abril Fatface";
-  line-height: 1;
-  color: white;
-  justify-content: center;
-  top: 10%;
-}
-.block.uno .wrapper-header h1 {
-  font-size: 4rem;
-  text-align: right;
-  letter-spacing: 2px;
-  text-shadow: 3px 4px 1px rgba(216, 179, 78, 0.4);
-}
-.block.uno .wrapper-header h1 span {
-  display: block;
-  font-size: 6rem;
-}
-.block.uno .wrapper-header .nuvola-prodotti {
-  max-width: 400px;
-  height: 300px;
-}
-.block.tre .wrapper-header {
-  position: relative;
-  z-index: 100;
-  display: flex;
-  font-family: "Abril Fatface";
-  line-height: 1;
-  color: white;
-  justify-content: flex-end;
-  top: 30%;
-}
-.block.tre .wrapper-header h1 {
-  font-size: 4rem;
-  text-align: right;
-  font-family: "poppins";
-}
-.block.tre .wrapper-header h1 span {
-  display: block;
-  font-size: 6rem;
-}
-.block.tre .wrapper-header p {
-  font-family: "poppins";
-  margin-top: 1rem;
-  text-align: right;
-  line-height: 25px;
-}
-.block.due .wrapper-header {
-  position: relative;
-  z-index: 100;
-  display: flex;
-  font-family: "Abril Fatface";
-  line-height: 1;
-  color: white;
-  justify-content: flex-start;
-  top: 30%;
-}
-.block.due .wrapper-header h1 {
-  font-size: 4rem;
-  text-align: right;
-  font-family: "poppins";
-}
-.block.due .wrapper-header h1 span {
-  display: block;
-  font-size: 6rem;
-}
-.block.due .wrapper-header p {
-  font-family: "poppins";
-  margin-top: 1rem;
-  text-align: right;
-  line-height: 25px;
-}
-.block header {
-  margin: 1rem;
-  max-width: 600px;
-  position: relative;
-}
-.block.due {
-  background-color: lightcoral;
-}
-.block.due header {
-  left: 16%;
-}
-.block.tre {
-  background-color: rgb(122, 145, 213);
-}
-.block.tre header {
-  right: 5%;
-}
+  overflow: hidden; }
+  .block .background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0; }
+  .block .idea {
+    position: absolute;
+    z-index: 100;
+    width: 780px;
+    top: 40%;
+    left: 23%; }
+  .block .pc {
+    position: absolute;
+    max-width: 1200px;
+    width: 100%;
+    right: 0;
+    top: 15%; }
+  .block .acquisto {
+    position: absolute;
+    max-width: 1250px;
+    width: 100%;
+    left: 10%;
+    top: 28%; }
+  .block.uno .wrapper-header {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    font-family: "Abril Fatface";
+    line-height: 1;
+    color: white;
+    justify-content: center;
+    top: 10%; }
+    .block.uno .wrapper-header h1 {
+      font-size: 4rem;
+      text-align: right;
+      letter-spacing: 2px;
+      text-shadow: 3px 4px 1px #d8b34e66; }
+      .block.uno .wrapper-header h1 span {
+        display: block;
+        font-size: 6rem; }
+    .block.uno .wrapper-header .nuvola-prodotti {
+      max-width: 400px;
+      height: 300px; }
+  .block.tre .wrapper-header {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    font-family: "Abril Fatface";
+    line-height: 1;
+    color: white;
+    justify-content: flex-end;
+    top: 30%; }
+    .block.tre .wrapper-header h1 {
+      font-size: 4rem;
+      text-align: right;
+      font-family: "poppins"; }
+      .block.tre .wrapper-header h1 span {
+        display: block;
+        font-size: 6rem; }
+    .block.tre .wrapper-header p {
+      font-family: "poppins";
+      margin-top: 1rem;
+      text-align: right;
+      line-height: 25px; }
+  .block.due .wrapper-header {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    font-family: "Abril Fatface";
+    line-height: 1;
+    color: white;
+    justify-content: flex-start;
+    top: 30%; }
+    .block.due .wrapper-header h1 {
+      font-size: 4rem;
+      text-align: right;
+      font-family: "poppins"; }
+      .block.due .wrapper-header h1 span {
+        display: block;
+        font-size: 6rem; }
+    .block.due .wrapper-header p {
+      font-family: "poppins";
+      margin-top: 1rem;
+      text-align: right;
+      line-height: 25px; }
+  .block header {
+    margin: 1rem;
+    max-width: 600px;
+    position: relative; }
+  .block.due {
+    background-color: lightcoral; }
+    .block.due header {
+      left: 16%; }
+  .block.tre {
+    background-color: #7a91d5; }
+    .block.tre header {
+      right: 5%; }
 
 section.form {
   display: flex;
@@ -206,19 +172,15 @@ section.form {
   margin: 10rem 0;
   height: 100vh;
   max-width: 900px;
-  margin: 5% auto;
-}
+  margin: 5% auto; }
 
 g#logo {
-  opacity: 0;
-}
+  opacity: 0; }
 
 g#pc-logo1 {
-  opacity: 0;
-}
+  opacity: 0; }
 
 h1 {
-  font-size: 2rem;
-}
+  font-size: 2rem; }
 
 /*# sourceMappingURL=style.css.map */
